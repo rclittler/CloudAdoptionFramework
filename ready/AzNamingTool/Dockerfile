@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["AzureNamingTool.csproj", "."]
+COPY . .
 RUN dotnet restore "./AzureNamingTool.csproj"
 COPY . .
 WORKDIR "/src/."
